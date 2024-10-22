@@ -1,21 +1,21 @@
 import axios from 'axios';
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextRequest, NextResponse } from "next/server";
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextRequest) {
   if (req.method === 'POST') {
-    const { message } = req.body;
+    const { message } = await req.json();
 
     try {
       const response = await axios.post('http://localhost:5000/chat', {
         message
       });
 
-      return res.status(200).json({ response: response.data.response });
+      return NextResponse.json({ response: response.data.response },{status:200});
     } catch (error) {
       console.error('Error communicating with Flask API:', error);
-      return res.status(500).json({ error: 'Error communicating with the Flask API' });
+      return NextResponse.json({ error: 'Error communicating with the Flask API' },{status: 500});
     }
   } else {
-    res.status(405).json({ error: 'Method not allowed' });
+    return NextResponse.json({ error: 'Method not allowed' },{status: 405});
   }
 }
