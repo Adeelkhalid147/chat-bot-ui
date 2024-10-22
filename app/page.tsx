@@ -34,17 +34,17 @@ export default function Home() {
   }
   return (
     // Main
-    <div className="bg-slate-200 h-screen w-screen">
+    <div className="bg-slate-200 min-h-screen w-full flex flex-col items-center justify-between p-4l">
       {/* Heading */}
       <div>
       <h1 className="text-4xl font-bold text-blue-600 text-center pt-5 mb-10">AI CHATBOT</h1>
       </div>
       
       {/* Chatbox */}
-      <div className=" bg-stone-100 mx-auto w-3/4 border rounded-lg shadow-lg">
+      <div className=" bg-stone-100 w-full max-w-screen-md flex-grow border rounded-lg shadow-lg mb-6">
       <Chatbox messages={messages}/>
       </div>
-      <div className=" bg-stone-100 mx-auto w-3/4 border shadow-lg rounded-lg my-6">
+      <div className=" bg-stone-100 w-full max-w-screen-md border shadow-lg rounded-lg mb-4">
       <Input onSendMessage={handleSendMessage}/>
       </div>
 
