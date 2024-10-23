@@ -35,6 +35,7 @@ export default function Home() {
   return (
     // Main
     <div className="bg-slate-200 min-h-screen w-full flex flex-col items-center justify-between p-4l">
+      <div>hello</div>
       {/* Heading */}
       <div>
       <h1 className="text-4xl font-bold text-blue-600 text-center pt-5 mb-10">AI CHATBOT</h1>
