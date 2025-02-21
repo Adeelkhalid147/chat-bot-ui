@@ -247,7 +247,7 @@ const AudioTranscription: React.FC<InputProps> = ({ onSendMessage }) => {
                 />
                 <div className="flex items-center space-x-2">
                     <MdOutlineSettingsVoice 
-                        className={`size-8 rounded-full h-10 bg-pink-300 cursor-pointer ${isRecording ? 'animate-pulse' : ''}`} 
+                        className={`size-9 rounded-full h-12 bg-pink-300 cursor-pointer ${isRecording ? 'animate-pulse' : ''}`} 
                         onClick={handleRecording} 
                     />
                     <button 
