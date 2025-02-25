@@ -165,6 +165,7 @@
 import React, { useState, useRef } from 'react';
 import { MdOutlineSettingsVoice, MdSend } from "react-icons/md";
 import { LiaPlusSolid } from "react-icons/lia";
+import Image from "next/image"
 
 interface InputProps {
   onSendMessage: (message: string, files?: File[]) => void;
@@ -274,7 +275,7 @@ const AudioTranscription: React.FC<InputProps> = ({ onSendMessage }) => {
               {selectedFiles.map((file, index) => (
                 <div key={index} className="relative">
                   {file.type.startsWith('image/') ? (
-                    <img
+                    <Image
                       src={URL.createObjectURL(file)}
                       alt={`Selected Image ${index + 1}`}
                       className="max-w-[100px] max-h-[100px] rounded-lg"
