@@ -173,7 +173,8 @@ interface InputProps {
 
 const AudioTranscription: React.FC<InputProps> = ({ onSendMessage }) => {
   const [isRecording, setIsRecording] = useState(false);
-  const [transcription, setTranscription] = useState('');
+  const [transcription] = useState("");
+
   const [message, setMessage] = useState<string>("");
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]); // State to store multiple files
   const [fileError, setFileError] = useState<string | null>(null); // State to handle file errors
