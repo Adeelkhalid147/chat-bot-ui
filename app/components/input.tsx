@@ -282,6 +282,8 @@ const AudioTranscription: React.FC<InputProps> = ({ onSendMessage }) => {
                     <Image
                       src={URL.createObjectURL(file)}
                       alt={`Selected Image ${index + 1}`}
+                      width={100}
+                      height={100}
                       className="max-w-[100px] max-h-[100px] rounded-lg"
                     />
                   ) : (
