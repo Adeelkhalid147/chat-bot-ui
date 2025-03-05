@@ -229,8 +229,11 @@ const AudioTranscription: React.FC<InputProps> = ({ onSendMessage }) => {
       alert("Please enter a message or attach files before sending");
       return;
     }
-
-    onSendMessage(message, selectedFiles); // Send both message and files
+    const imageUrl = message.match(/https?:\/\/.*\.(?:png|jpg|jpeg|gif)/i)?.[0];
+    if (imageUrl) {
+      console.log("Sending image URL", imageUrl);
+    }
+    onSendMessage(message, selectedFiles, imageUrl ? [imageUrl] : []); // Send both message and files and image URL
     setMessage(""); // Clear the input field after sending
     setSelectedFiles([]); // Clear the selected files
   };
