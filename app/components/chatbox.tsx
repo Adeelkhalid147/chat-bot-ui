@@ -59,5 +59,3 @@ const Chatbox: React.FC<ChatboxProps> = ({ messages }) => {
 };
 
 export default Chatbox;
-
-
