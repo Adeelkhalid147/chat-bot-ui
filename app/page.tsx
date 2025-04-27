@@ -171,7 +171,8 @@ export default function Home() {
         ...(imageUrls && imageUrls.length > 0 && { image_urls: imageUrls })
       };
 
-      const response = await axios.post("http://localhost:5000/chat", payload);
+      // const response = await axios.post("http://localhost:5000/chat", payload);
+      const response = await axios.post("http://152.53.129.172:5010/chat", payload);
       
       setTimeout(() => {
         setMessages(prev => [...prev, { 
