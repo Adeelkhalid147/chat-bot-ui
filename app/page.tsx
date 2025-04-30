@@ -173,7 +173,8 @@ export default function Home() {
       };
 
       // const response = await axios.post("http://localhost:5000/chat", payload);
-      const response = await axios.post("http://152.53.129.172:5010/chat", payload);
+      // const response = await axios.post("http://152.53.129.172:5010/chat", payload);
+      const response = await axios.post("/chat", payload);
       
       setTimeout(() => {
         setMessages(prev => [...prev, { 
