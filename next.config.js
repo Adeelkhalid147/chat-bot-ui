@@ -8,7 +8,7 @@
 
 // export default nextConfig;
 
-const abc = {
+module.exports = {
   async rewrites() {
     return [
       {
@@ -18,5 +18,3 @@ const abc = {
     ];
   },
 };
-
-export default abc;
