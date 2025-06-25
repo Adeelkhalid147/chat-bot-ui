@@ -168,11 +168,14 @@ export default function Home() {
         ...(imageUrls && imageUrls.length > 0 && { image_urls: imageUrls }),
       };
 
-      const response = await axios.post("http://localhost:8011/chat", payload);
-      // const response = await axios.post(
-      //   "https://adeelchatapi.informaticasystems.com/chat",
-      //   payload
-      // );
+      // this is for localhost  
+      // const response = await axios.post("http://localhost:8011/chat", payload);
+
+      // deploy on server
+      const response = await axios.post(
+        "https://adeelchatapi.informaticasystems.com/chat",
+        payload
+      );
       // const response = await axios.post("/chat", payload);
 
       setTimeout(() => {
