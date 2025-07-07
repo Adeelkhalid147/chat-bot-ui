@@ -170,6 +170,8 @@ export default function Home() {
 
       // this is for localhost  
       // const response = await axios.post("http://localhost:8011/chat", payload);
+      // for local host running code  
+      // const response = await axios.post("http://localhost:5000/chat", payload);
 
       // deploy on server
       const response = await axios.post(
